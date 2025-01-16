@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+
+* {
+  box-sizing: border-box; /* to avoid width problems if padding */
+}
+
+body {
+  font-family: "Muli", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden; /* to hide scrollbars */
+  margin: 0;
+}
+
+.container_one {
+  display: flex;
+  width: 90vw;
+}
+
+.panel {
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: flex 0.7s ease-in;
+  -webkit-transition: all 700ms ease-in;
+}
+
+.panel h3 {
+  font-size: 24px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}
+
+/*srolling in the Godspeed website and not the lest*/
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    width: 100%;/* remove*/
+}
+
+
+
+/*black class name*/
+#black{
+    background-color: rgb(244, 128, 128);
+    border-radius: 50px;
+}
+
+
+
+/*link side by side */
+
+.link-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; 
+}
+
+.link-container a {
+  text-decoration: none;
+  color: #000; 
+  padding: 10px 20px;
+  border: 1px solid #000; 
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.link-container a:hover {
+  background-color: #f0f0f0;
+}
+
+/*the lage thanck you text removed*/
+.thank-you {
+  text-align: center;
+  font-size: 2rem; /* Adjust the size as needed  mwaba remember this*/
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+
+/* vision and mission statement */
+
+.statement-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.statement {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px 0;
+  width: 80%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.statement p {
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+
+.statement strong p {
+  font-size: 1.5em;
+  color: #333;
+}
+
+
+/* partnerships remember this is a different html website*/
+
+
+.header-text {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  margin: 20px auto;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/* mmmmm */
+
+
+.welcome-text {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.5em;
+  color: #333;
+}
+
